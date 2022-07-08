@@ -34,7 +34,7 @@ full = giveme()
 st.write(full)
 
 fig = px.bar(full, x="Month"
-             , y=['Desktop','Mobile'], title="test"
+             , y=['Desktop','Mobile'], title="Uhaul traffic"
             #labels=dict(value="Average overall points", variable="Metrics"), height=600
             )
 st.plotly_chart(fig, use_container_width=True)
