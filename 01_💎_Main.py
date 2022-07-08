@@ -32,3 +32,9 @@ def giveme():
 
 full = giveme()
 st.write(full)
+
+fig = px.bar(uhaulslim, x="Month"
+             , y=["All Devices",'Desktop','Mobile'] title="test"
+            #labels=dict(value="Average overall points", variable="Metrics"), height=600
+            )
+st.plotly_chart(fig, use_container_width=True)
