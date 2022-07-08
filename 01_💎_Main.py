@@ -26,6 +26,7 @@ def giveme():
     collection = db.traffic
     traffic = collection.find()
     trafficdf = pd.DataFrame(traffic)
+    trafficdf = trafficdf.drop(columns=['_id'])
     return trafficdf
 
 
