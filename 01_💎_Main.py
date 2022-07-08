@@ -18,3 +18,16 @@ st.sidebar.markdown("# Main 💎")
 #@st.cache()#hash_funcs={MongoClient: id}
 def get_client():
     return MongoClient(**st.secrets["mongo"])
+
+@st.experimental_memo
+def giveme():
+    client = get_client()
+    db = client.report
+    collection = db.traffic
+    traffic = collection.find()
+    trafficdf = pd.DataFrame(traffic)
+    return trafficdf
+
+
+full = giveme()
+st.write(full)
