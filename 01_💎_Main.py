@@ -32,7 +32,7 @@ def giveme(company):
     return companydf
 
 
-full = giveme(uhaul)
+full = giveme('uhaul')
 st.write(full)
 
 fig = px.bar(full, x="Month"
