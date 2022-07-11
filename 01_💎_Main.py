@@ -33,11 +33,19 @@ def giveme(company):
     return companydf
 
 
-full = giveme('sonos')
-st.write(full)
+uhaul = giveme('uhaul')
+extraspace = giveme('extraspace')
+neighbor = giveme('neighbor')
+sparefoot = giveme('sparefoot')
+#st.write(full)
 
 dict = {
-    'Sonos':full}
+    'Uhaul':uhaul,
+    'Extraspace':extraspace,
+    'Neighbor':neighbor,
+    'Sparefoot':sparefoot,
+
+}
 
 fig = px.bar(full, x="Month"
              , y=['Desktop','Mobile'], title="Uhaul traffic"
@@ -66,4 +74,7 @@ def graph(company):
     return fig
 
 
-st.plotly_chart(graph('Sonos'), use_container_width=True)
+st.plotly_chart(graph('Uhaul'), use_container_width=True)
+st.plotly_chart(graph('Extraspace'), use_container_width=True)
+st.plotly_chart(graph('Neighbor'), use_container_width=True)
+st.plotly_chart(graph('Sparefoot'), use_container_width=True)
