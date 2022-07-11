@@ -54,7 +54,7 @@ def graph(company):
     p3 = np.polyfit(x,y,3)
     p3polyval = np.polyval(p3,x)
 
-    fig = px.line(sonosslim, x=x
+    fig = px.line(dict[company], x=x
                  , y=p1polyval, title=company+' traffic',#, trendline='lowess'
                 #labels=dict(value="Average overall points", variable=p1polyval), height=600
                 )
