@@ -43,7 +43,7 @@ fig = px.bar(full, x="Month"
             #labels=dict(value="Average overall points", variable="Metrics"), height=600
             )
 def graph(company):
-    mm = trafficdict[company].set_index('Month')
+    mm = dict[company].set_index('Month')
     x = mm.index
     x = pd.to_datetime(x).values.view(np.int64)
     y = mm.iloc[:, 0]
