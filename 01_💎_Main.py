@@ -19,18 +19,20 @@ st.sidebar.markdown("# Main 💎")
 def get_client():
     return MongoClient(**st.secrets["mongo"])
 
+client = get_client()
+db = client.report
+    
 @st.experimental_memo
-def giveme():
-    client = get_client()
-    db = client.report
-    collection = db.traffic
-    traffic = collection.find()
-    trafficdf = pd.DataFrame(traffic)
-    trafficdf = trafficdf.drop(columns=['_id'])
-    return trafficdf
+def giveme(company):
+    
+    mycol = db[company]
+    collection = mycol.find()
+    companydf = pd.DataFrame(collection)
+    companydf = companydf.drop(columns=['_id'])
+    return companydf
 
 
-full = giveme()
+full = giveme(uhaul)
 st.write(full)
 
 fig = px.bar(full, x="Month"
