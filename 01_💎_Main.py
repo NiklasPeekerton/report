@@ -47,10 +47,7 @@ dict = {
 
 }
 
-fig = px.bar(full, x="Month"
-             , y=['Desktop','Mobile'], title="Uhaul traffic"
-            #labels=dict(value="Average overall points", variable="Metrics"), height=600
-            )
+
 def graph(company):
     mm = dict[company].set_index('Month')
     x = mm.index
