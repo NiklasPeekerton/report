@@ -49,7 +49,8 @@ dict = {
 
 }
 #st.metric("Uhaul traffic", numerize(metrics['Size'][0]))
-st.write(numerize(metrics['Size'][0]))
+test = metrics['Size'][0]
+st.write(test)
 
 
 def graph(company):
