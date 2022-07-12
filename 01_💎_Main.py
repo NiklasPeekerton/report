@@ -52,8 +52,8 @@ dict = {
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Uhaul traffic", numerize.numerize(metrics['Size'][0]))
 col2.metric("Uhaul p1 value", "{:.0%}".format(metrics['p1 R-Value'][0]))
-col3.metric("Uhaul p2 value", metrics['p2 R-Value'][0])
-col4.metric("Uhaul p3 value", metrics['p3 R-Value'][0])
+col3.metric("Uhaul p2 value", "{:.0%}".format(metrics['p2 R-Value'][0]))
+col4.metric("Uhaul p3 value", "{:.0%}".format(metrics['p3 R-Value'][0]))
 
 #percentage = "{:.0%}".format(metrics['p1 R-Value'][0])
 
