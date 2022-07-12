@@ -48,9 +48,15 @@ dict = {
     'Sparefoot':sparefoot,
 
 }
+
+col1, col2, col3, col4 = st.columns(4)
+col1.metric("Uhaul traffic", numerize.numerize(metrics['Size'][0])
+col2.metric("Uhaul p1 value", metrics['p1 R-Value'][0])
+col3.metric("Uhaul p2 value", metrics['p2 R-Value'][0])
+col4.metric("Uhaul p3 value", metrics['p3 R-Value'][0])
+
 st.metric("Uhaul traffic", numerize.numerize(metrics['Size'][0]))
 test = metrics['Size'][0]
-st.write(numerize.numerize(metrics['Size'][0]))
 
 
 def graph(company):
