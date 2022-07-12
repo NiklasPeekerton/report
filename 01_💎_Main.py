@@ -47,7 +47,7 @@ dict = {
     'Sparefoot':sparefoot,
 
 }
-st.metric("Number of stocks", metrics.loc['Sonos'][0])
+st.metric("Number of stocks", metrics.loc['Slope'][0])
 
 
 def graph(company):
