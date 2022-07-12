@@ -24,9 +24,9 @@ client = get_client()
 db = client.report
     
 @st.experimental_memo
-def giveme(company):
+def giveme(coll):
     
-    mycol = db[company]
+    mycol = db[coll]
     collection = mycol.find()
     companydf = pd.DataFrame(collection)
     companydf = companydf.drop(columns=['_id'])
@@ -37,7 +37,8 @@ uhaul = giveme('uhaul')
 extraspace = giveme('extraspace')
 neighbor = giveme('neighbor')
 sparefoot = giveme('sparefoot')
-#st.write(full)
+metrics = giveme('metrics')
+st.write(metrics)
 
 dict = {
     'Uhaul':uhaul,
