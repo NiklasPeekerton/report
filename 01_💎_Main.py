@@ -57,7 +57,7 @@ col4.metric("Uhaul p3 value", "{:.0%}".format(metrics['p3 R-Value'][0]))
 
 #percentage = "{:.0%}".format(metrics['p1 R-Value'][0])
 
-st.metric("Uhaul traffic", numerize.numerize(metrics['Size'][0]))
+st.metric("Uhaul slope", numerize.numerize(metrics['Slope'][0]))
 test = metrics['Size'][0]
 
 
