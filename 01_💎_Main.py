@@ -8,6 +8,7 @@ import numpy as np
 import altair as alt
 import plotly.express as px
 import plotly.graph_objects as go
+import numerize
 
 st.set_page_config(layout="wide")
 
@@ -47,7 +48,7 @@ dict = {
     'Sparefoot':sparefoot,
 
 }
-st.metric("Uhaul traffic", metrics['Size'][0])
+st.metric("Uhaul traffic", numerize(metrics['Size'][0]))
 #st.write(metrics['Size'][0])
 
 
