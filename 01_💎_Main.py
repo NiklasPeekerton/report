@@ -55,9 +55,11 @@ col2.metric("Uhaul p1 value", "{:.0%}".format(metrics['p1 R-Value'][0]))
 col3.metric("Uhaul p2 value", "{:.0%}".format(metrics['p2 R-Value'][0]))
 col4.metric("Uhaul p3 value", "{:.0%}".format(metrics['p3 R-Value'][0]))
 
+col1, col2, col3, col4 = st.columns(4)
+col1.metric("Uhaul slope", numerize.numerize(metrics['Slope'][0]))
 #percentage = "{:.0%}".format(metrics['p1 R-Value'][0])
 
-st.metric("Uhaul slope", metrics['Slope'][0]*10000000000000)
+
 test = metrics['Size'][0]
 
 
